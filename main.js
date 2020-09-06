@@ -4,15 +4,14 @@
 
 function rollDie() {
   let roll = Math.floor(Math.random() * 6) + 1;
-
-  console.log(roll);
+  return roll;
 }
 
 // Then roll two dice and add them together.
 
 function rollDice() {
-  let roll1 = Math.floor(Math.random() * 6) + 1;
-  let roll2 = Math.floor(Math.random() * 6) + 1;
+  let roll1 = rollDie();
+  let roll2 = rollDie();
 
   let bothRolled = roll1 + roll2;
 
