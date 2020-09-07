@@ -26,56 +26,6 @@ for (let rollNum = 1; rollNum <= 1000; rollNum++) {
   count[rollResult - 2]++;
 }
 
-let rollNumLog2 = document.createElement("div");
-rollNumLog2.innerText = `2: ${count[2 - 2]}`;
-document.body.append(rollNumLog2);
-
-let rollNumLog3 = document.createElement("div");
-rollNumLog3.innerText = `3: ${count[3 - 2]}`;
-document.body.append(rollNumLog3);
-
-let rollNumLog4 = document.createElement("div");
-rollNumLog4.innerText = `4: ${count[4 - 2]}`;
-document.body.append(rollNumLog4);
-
-let rollNumLog5 = document.createElement("div");
-rollNumLog5.innerText = `5: ${count[5 - 2]}`;
-document.body.append(rollNumLog5);
-
-let rollNumLog6 = document.createElement("div");
-rollNumLog6.innerText = `6: ${count[6 - 2]}`;
-document.body.append(rollNumLog6);
-
-let rollNumLog7 = document.createElement("div");
-rollNumLog7.innerText = `7: ${count[7 - 2]}`;
-document.body.append(rollNumLog7);
-
-let rollNumLog8 = document.createElement("div");
-rollNumLog8.innerText = `8: ${count[8 - 2]}`;
-document.body.append(rollNumLog8);
-
-let rollNumLog9 = document.createElement("div");
-rollNumLog9.innerText = `9: ${count[9 - 2]}`;
-document.body.append(rollNumLog9);
-
-let rollNumLog10 = document.createElement("div");
-rollNumLog10.innerText = `10: ${count[10 - 2]}`;
-document.body.append(rollNumLog10);
-
-let rollNumLog11 = document.createElement("div");
-rollNumLog11.innerText = `11: ${count[11 - 2]}`;
-document.body.append(rollNumLog11);
-
-let rollNumLog12 = document.createElement("div");
-rollNumLog12.innerText = `12: ${count[12 - 2]}`;
-document.body.append(rollNumLog12);
-
-/* create bar graphs for how many of each result there were during the 1000 rolls,
-with the result with highest count set equqal to 100% width, and other counts in proportion to that */
-
-// find array number with maximum count in array, to find length which should be set to 100% width in bar graph
-
-let barMax = 0;
 let bar2count = count[2 - 2];
 let bar3count = count[3 - 2];
 let bar4count = count[4 - 2];
@@ -88,7 +38,58 @@ let bar10count = count[10 - 2];
 let bar11count = count[11 - 2];
 let bar12count = count[12 - 2];
 
+let rollNumLog2 = document.createElement("div");
+rollNumLog2.innerText = `2: ${bar2count}`;
+document.body.append(rollNumLog2);
+
+let rollNumLog3 = document.createElement("div");
+rollNumLog3.innerText = `3: ${bar3count}`;
+document.body.append(rollNumLog3);
+
+let rollNumLog4 = document.createElement("div");
+rollNumLog4.innerText = `4: ${bar4count}`;
+document.body.append(rollNumLog4);
+
+let rollNumLog5 = document.createElement("div");
+rollNumLog5.innerText = `5: ${bar5count}`;
+document.body.append(rollNumLog5);
+
+let rollNumLog6 = document.createElement("div");
+rollNumLog6.innerText = `6: ${bar6count}`;
+document.body.append(rollNumLog6);
+
+let rollNumLog7 = document.createElement("div");
+rollNumLog7.innerText = `7: ${bar7count}`;
+document.body.append(rollNumLog7);
+
+let rollNumLog8 = document.createElement("div");
+rollNumLog8.innerText = `8: ${bar8count}`;
+document.body.append(rollNumLog8);
+
+let rollNumLog9 = document.createElement("div");
+rollNumLog9.innerText = `9: ${bar9count}`;
+document.body.append(rollNumLog9);
+
+let rollNumLog10 = document.createElement("div");
+rollNumLog10.innerText = `10: ${bar10count}`;
+document.body.append(rollNumLog10);
+
+let rollNumLog11 = document.createElement("div");
+rollNumLog11.innerText = `11: ${bar11count}`;
+document.body.append(rollNumLog11);
+
+let rollNumLog12 = document.createElement("div");
+rollNumLog12.innerText = `12: ${bar12count}`;
+document.body.append(rollNumLog12);
+
+/* create bar graphs for how many of each result there were during the 1000 rolls,
+with the result with highest count set equqal to 100% width, and other counts in proportion to that */
+
+// find array number with maximum count in array, to find length which should be set to 100% width in bar graph
+
 // check each bar#count to see if it is greater than the previous barMax num, and reassign new bar#count to barMax if it is greater
+
+let barMax = 0;
 
 if (bar2count > barMax) {
   barMax = bar2count;
@@ -135,48 +136,51 @@ if (bar12count > barMax) {
 }
 
 // set width of each bar#(2-12) to be relative to 100% width of barMax width
-let bar2 = document.createElement("div");
-bar2.style.width = (bar2count / barMax) * 100;
-document.append(bar2);
 
-let bar3 = document.createElement("div");
-bar3.style.width = (bar3count / barMax) * 100;
-document.append(bar3);
+document.getElementsByClassName("bar").style.background = "red";
 
-let bar4 = document.createElement("div");
-bar4.style.width = (bar4count / barMax) * 100;
-document.append(bar4);
+document.getElementsByClassName(
+  "bar2"
+).style.width = `(${bar2count} / ${barMax}) * 100`;
 
-let bar5 = document.createElement("div");
-bar5.style.width = (bar5count / barMax) * 100;
-document.append(bar5);
+document.getElementsByClassName(
+  "bar3"
+).style.width = `(${bar3count} / ${barMax}) * 100`;
 
-let bar6 = document.createElement("div");
-bar6.style.width = (bar6count / barMax) * 100;
-document.append(bar6);
+document.getElementsByClassName(
+  "bar4"
+).style.width = `(${bar4count} / ${barMax}) * 100`;
 
-let bar7 = document.createElement("div");
-bar7.style.width = (bar7count / barMax) * 100;
-document.append(bar7);
+document.getElementsByClassName(
+  "bar5"
+).style.width = `(${bar5count} / ${barMax}) * 100`;
 
-let bar8 = document.createElement("div");
-bar8.style.width = (bar8count / barMax) * 100;
-document.append(bar8);
+document.getElementsByClassName(
+  "bar6"
+).style.width = `(${bar6count} / ${barMax}) * 100`;
 
-let bar9 = document.createElement("div");
-bar9.style.width = (bar9count / barMax) * 100;
-document.append(bar9);
+document.getElementsByClassName(
+  "bar7"
+).style.width = `(${bar7count} / ${barMax}) * 100`;
 
-let bar10 = document.createElement("div");
-bar10.style.width = (bar10count / barMax) * 100;
-document.append(bar10);
+document.getElementsByClassName(
+  "bar8"
+).style.width = `(${bar8count} / ${barMax}) * 100`;
 
-let bar11 = document.createElement("div");
-bar11.style.width = (bar11count / barMax) * 100;
-document.append(bar11);
+document.getElementsByClassName(
+  "bar9"
+).style.width = `(${bar9count} / ${barMax}) * 100`;
 
-let bar12 = document.createElement("div");
-bar12.style.width = (bar12count / barMax) * 100;
-document.append(bar12);
+document.getElementsByClassName(
+  "bar10"
+).style.width = `(${bar10count} / ${barMax}) * 100`;
+
+document.getElementsByClassName(
+  "bar11"
+).style.width = `(${bar11count} / ${barMax}) * 100`;
+
+document.getElementsByClassName(
+  "bar12"
+).style.width = `(${bar12count} / ${barMax}) * 100`;
 
 // Then render the output to the HTML page.
