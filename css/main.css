@@ -1,2 +1,9 @@
-
 /*  Put your CSS Here */
+.bar {
+  background-color: rgb(128, 194, 133);
+  height: 15px;
+  margin: 10px;
+
+  font-weight: bold;
+  font-size: 20;
+}
