@@ -137,50 +137,39 @@ if (bar12count > barMax) {
 
 // set width of each bar#(2-12) to be relative to 100% width of barMax width
 
-document.getElementsByClassName("bar").style.background = "red";
+// document.getElementsByClassName("bar").style.backgroundColor = "#ff0000";
 
-document.getElementsByClassName(
-  "bar2"
-).style.width = `(${bar2count} / ${barMax}) * 100`;
+let bar2div = document.getElementById("bar2");
+bar2div.style.width = (bar2count / barMax) * 100 + "%";
 
-document.getElementsByClassName(
-  "bar3"
-).style.width = `(${bar3count} / ${barMax}) * 100`;
+let bar3div = document.getElementById("bar3");
+bar3div.style.width = (bar3count / barMax) * 100 + "%";
 
-document.getElementsByClassName(
-  "bar4"
-).style.width = `(${bar4count} / ${barMax}) * 100`;
+let bar4div = document.getElementById("bar4");
+bar4div.style.width = (bar4count / barMax) * 100 + "%";
 
-document.getElementsByClassName(
-  "bar5"
-).style.width = `(${bar5count} / ${barMax}) * 100`;
+let bar5div = document.getElementById("bar5");
+bar5div.style.width = (bar5count / barMax) * 100 + "%";
 
-document.getElementsByClassName(
-  "bar6"
-).style.width = `(${bar6count} / ${barMax}) * 100`;
+let bar6div = document.getElementById("bar6");
+bar6div.style.width = (bar6count / barMax) * 100 + "%";
 
-document.getElementsByClassName(
-  "bar7"
-).style.width = `(${bar7count} / ${barMax}) * 100`;
+let bar7div = document.getElementById("bar7");
+bar7div.style.width = (bar7count / barMax) * 100 + "%";
 
-document.getElementsByClassName(
-  "bar8"
-).style.width = `(${bar8count} / ${barMax}) * 100`;
+let bar8div = document.getElementById("bar8");
+bar8div.style.width = (bar8count / barMax) * 100 + "%";
 
-document.getElementsByClassName(
-  "bar9"
-).style.width = `(${bar9count} / ${barMax}) * 100`;
+let bar9div = document.getElementById("bar9");
+bar9div.style.width = (bar9count / barMax) * 100 + "%";
 
-document.getElementsByClassName(
-  "bar10"
-).style.width = `(${bar10count} / ${barMax}) * 100`;
+let bar10div = document.getElementById("bar10");
+bar10div.style.width = (bar10count / barMax) * 100 + "%";
 
-document.getElementsByClassName(
-  "bar11"
-).style.width = `(${bar11count} / ${barMax}) * 100`;
+let bar11div = document.getElementById("bar11");
+bar11div.style.width = (bar11count / barMax) * 100 + "%";
 
-document.getElementsByClassName(
-  "bar12"
-).style.width = `(${bar12count} / ${barMax}) * 100`;
+let bar12div = document.getElementById("bar12");
+bar12div.style.width = (bar12count / barMax) * 100 + "%";
 
 // Then render the output to the HTML page.
